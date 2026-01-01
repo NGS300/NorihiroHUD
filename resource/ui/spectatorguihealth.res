@@ -1,0 +1,81 @@
+"Resource/UI/SpectatorGUIHealth.res"
+{
+	"PlayerStatusHealthImage"
+	{
+		"ControlName"	"ImagePanel"
+		"fieldName"		"PlayerStatusHealthImage"
+		"xpos"			"9999"
+		"wide"			"0"
+		"tall"			"0"
+	}
+	"PlayerStatusHealthImageBG"
+	{
+		"ControlName"	"ImagePanel"
+		"fieldName"		"PlayerStatusHealthImageBG"
+		"xpos"			"9999"
+		"wide"			"0"
+		"tall"			"0"
+	}
+	"BuildingStatusHealthImageBG"
+	{
+		"ControlName"	"ImagePanel"
+		"fieldName"		"BuildingStatusHealthImageBG"
+		"xpos"			"9999"
+		"wide"			"0"
+		"tall"			"0"
+	}
+	"PlayerStatusHealthBonusImage"
+	{
+		"ControlName"	"ImagePanel"
+		"fieldName"		"PlayerStatusHealthBonusImage"
+		"xpos"			"9999"
+		"wide"			"0"
+		"tall"			"0"
+	}
+	"PlayerStatusHealthValue"
+	{
+		"ControlName"	"CExLabel"
+		"fieldName"		"PlayerStatusHealthValue"
+		"xpos"			"0"
+		"ypos"			"11"
+		"zpos"			"5"
+		"wide"			"30"
+		"tall"			"10"
+		"visible"		"1"
+		"enabled"		"1"
+		"labelText"		"%Health%"
+		"textAlignment"	"center"	
+		"font"			"QuicksandBold11"
+		"font_minmode"	"QuicksandBold10"
+		"fgcolor"		"TanLight"
+	}
+	"PlayerStatusHealthValueShadow"
+	{
+		"ControlName"	"CExLabel"
+		"fieldName"		"PlayerStatusHealthValueShadow"
+		"xpos"			"-1"
+		"ypos"			"-1"
+		"zpos"			"5"
+		"wide"			"30"
+		"tall"			"10"
+		"visible"		"1"
+		"enabled"		"1"
+		"labelText"		"%Health%"
+		"textAlignment"	"center"
+		"font"			"QuicksandBold11"
+		"font_minmode"	"QuicksandBold10"
+		"fgcolor"		"Black"
+
+		"pin_to_sibling"		"PlayerStatusHealthValue"
+		"pin_corner_to_sibling"	"PIN_TOPLEFT"
+		"pin_to_sibling_corner"	"PIN_TOPLEFT"
+	}
+	"PlayerStatusPlayerLevel"
+	{
+		"ControlName"	"CExLabel"
+		"fieldName"		"PlayerStatusPlayerLevel"
+		"xpos"			"9999"
+		"wide"			"0"
+		"tall"			"0"
+	}
+}

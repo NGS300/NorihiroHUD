@@ -1,0 +1,15 @@
+// Stop any 'hitmarker animation events' before starting another
+event DamagedPlayer
+{
+	StopEvent 	HitMarker 	0.0
+	RunEvent 		HitMarker		0.01
+}
+event HitMarker
+{ 
+	// Team colored hitmarker
+	Animate	Hitmarker				Alpha "255"			Linear 0.0 0.0		// tcHitmarker start
+	Animate	Hitmarker				Alpha "0"				Linear 0.0 0.6 		// tcHitmarker end //0.95
+	
+	 Animate  Crosshair_mark 		Alpha "200" 			Linear 0.0 0.0		// CrosshairHitmarker1 start
+	 Animate  Crosshair_mark 		Alpha "0"		 		Linear 0.0 0.5 		// CrosshairHitmarker1 end // 0.950
+}

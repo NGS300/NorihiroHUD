@@ -1,0 +1,41 @@
+"Resource/UI/HudKillStreakNotice.res"
+{
+	"Background"
+	{
+		"ControlName"	"EditablePanel"
+		"fieldName"		"Background"
+		"xpos"			"c-250"
+		"ypos"			"50"
+		"zpos"			"0"
+		"wide"			"375"
+		"wide_minmode"			"275"
+		"tall"			"50"
+		"autoResize"	"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"PaintBackgroundType"	"0"
+		"bgcolor_override"		"Shadow4"
+		"bgcolor_override_minmode"		"Shadow2"
+	}
+	"SplashLabel"
+	{
+		"ControlName"	"CExLabel"
+		"fieldName"		"SplashLabel"
+		"font"			"QuicksandObliqueBold10" //HudFontSmallestBold
+		"font_minmode"	"QuicksandObliqueBold8"
+		"labelText"		""
+		"textAlignment" "center"
+		"xpos"			"c-250"
+		"ypos"			"42"
+		"ypos_minmode"			"40"
+		"zpos"			"2"
+		"wide"			"375"
+		"wide_minmode"			"275"
+		"tall"			"40"
+		"autoResize"	"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"fgcolor"		"255 255 255 175"
+		"fgcolor_minmode"		"255 255 255 225"
+	}
+}

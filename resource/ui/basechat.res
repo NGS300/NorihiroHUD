@@ -1,0 +1,70 @@
+#base "../../cfg/norihirohud/hud_basechat.txt"
+"Resource/UI/BaseChat.res"
+{
+	"HudChat"
+	{
+		"ControlName"			"EditablePanel"
+		"fieldName"				"HudChat"
+		"visible"				"1"
+		"enabled"				"1"
+		"xpos"					"-2"
+		"ypos"					"-2"
+		"wide"					"250"
+		"wide_minmode"			"200"
+		"tall"					"120"
+		"tall_minmode"			"100"
+		"fgcolor"				"White"
+		"PaintBackgroundType" 	"2"
+		"paintbackground"		"0"
+		"paintborder"			"0"
+		"bgcolor_override"		"Blank" // Chat color
+	}
+	ChatInputLine
+	{
+		"ControlName"			"EditablePanel"
+		"fieldName"				"ChatInputLine"
+		"visible" 		        "1"
+		"enabled" 		        "1"
+		"xpos"					"3"
+		"ypos"					"395"
+		"wide"					"220"
+		"wide_minmode" 			"180"
+		"tall"					"0"
+		"PaintBackgroundType"	"0"
+	}
+	"ChatFiltersButton"
+	{
+		"ControlName"			"Button"
+		"fieldName"		        "ChatFiltersButton"
+		"xpos"					"220"
+		"xpos_minmode"			"168"
+		"ypos"					"0"
+		"wide"					"33"
+		"tall"					"8"
+		"visible"				"0"
+		"enabled"				"0"
+		"labelText"		        "#chat_filterbutton"
+		"textAlignment"		    "center"
+		"Default"				"0"		
+	}
+	"HudChatHistory"
+	{
+		"ControlName"			"RichText"
+		"fieldName"		        "HudChatHistory"
+		"xpos"					"0"
+		"ypos"					"0"
+		"wide"					"250"
+		"wide_minmode"			"200"
+		"tall"					"85"
+		"tall_minmode"			"80"
+		"wrap"					"1"
+		"autoResize"			"1"
+		"pinCorner"		        "1"
+		"visible"				"1"
+		"enabled"				"1"
+		"labelText"		        ""
+		"textAlignment"			"south-west"
+		"font"					"QuicksandObliqueBold12" //BikoBlack12 //ChatFont
+		"maxchars"		        "-1"
+	}
+}

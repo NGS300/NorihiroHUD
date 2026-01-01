@@ -1,0 +1,42 @@
+//================= Flash the medic charge hud when we have full charge =========================
+event HudMedicCharged
+{
+	Animate	ÜberLabel	FgColor		"UberCharge1Label"		Linear 0.0 0.1
+	Animate	ÜberLabel	FgColor		"UberCharge2Label"		Linear 0.3 0.4
+
+	Animate	ChargeLabel 	FgColor		"UberCharge1Label"		Linear 0.0 0.1
+	Animate	ChargeLabel 	FgColor		"UberCharge2Label"		Linear 0.3 0.4
+	//Animate	ChargeLabel 	FgColor		"HiroRedLight"		Linear 0.6 0.7
+	
+	Animate	ChargeMeter 	FgColor		"UberCharge1Meter"		Linear 0.0 0.1
+	Animate	ChargeMeter 	FgColor		"UberCharge2Meter"		Linear 0.3 0.4 //225 0 125 200
+	//Animate	ChargeMeter 	FgColor		"HiroRedLight"		Linear 0.6 0.7
+
+	Animate	ChargeMeter1	FgColor		"VaccCharge1Meter"		Linear 0.0 0.1
+	Animate	ChargeMeter1	FgColor		"VaccCharge2Meter"		Linear 0.3 0.4
+	Animate	ChargeMeter2	FgColor		"VaccCharge2Meter"		Linear 0.0 0.1
+	Animate	ChargeMeter2	FgColor		"VaccCharge3Meter"		Linear 0.3 0.4
+	Animate	ChargeMeter3	FgColor		"VaccCharge3Meter"		Linear 0.0 0.1
+	Animate	ChargeMeter3	FgColor		"VaccCharge4Meter"		Linear 0.3 0.4
+	Animate	ChargeMeter4	FgColor		"VaccCharge4Meter"		Linear 0.0 0.1
+	Animate	ChargeMeter4	FgColor		"VaccCharge5Meter"		Linear 0.3 0.4
+
+	RunEvent HudMedicChargedLoop	0.6//9
+}
+event HudMedicChargedLoop
+{
+	RunEvent HudMedicCharged 	0.0
+}
+event HudMedicChargedStop
+{
+	StopEvent HudMedicCharged 	0.0
+	StopEvent HudMedicChargedLoop 	0.0
+	
+	Animate	ÜberLabel 	FgColor		"White"			Linear 0.0 0.0001
+	Animate	ChargeLabel 	FgColor		"White"			Linear 0.0 0.0001
+	Animate	ChargeMeter 	FgColor		"UberCharge0Meter"	Linear 0.0 0.0001
+	Animate	ChargeMeter1 	FgColor		"White"			Linear 0.0 0.0001
+	Animate	ChargeMeter2 	FgColor		"White"			Linear 0.0 0.0001
+	Animate	ChargeMeter3 	FgColor		"White"			Linear 0.0 0.0001
+	Animate	ChargeMeter4 	FgColor		"White"			Linear 0.0 0.0001
+}

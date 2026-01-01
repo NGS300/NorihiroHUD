@@ -1,0 +1,1 @@
+#base "../../customizations/basefiles/hud/objective/controlpoint/progress_bar.res"

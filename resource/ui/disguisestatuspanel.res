@@ -1,0 +1,1 @@
+#base "../../customizations/basefiles/hud/panel/disguise_status.res"

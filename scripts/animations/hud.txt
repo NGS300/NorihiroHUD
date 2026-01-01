@@ -1,0 +1,169 @@
+//============Do not move chat window==============
+event CompetitiveGame_LowerChatWindow	{ }
+event CompetitiveGame_RestoreChatWindow	{ }
+event HudTournament_MoveChatWindow 	{ }
+
+//============================================
+event TeamStatus_PlayerDead
+{
+	SetVisible DeathPanel  0 0
+	SetVisible SkullPanel  0 0
+	SetVisible respawntime  1 0
+
+	Animate DeathPanel ypos 0 Accel 0 0.2
+	Animate SkullPanel ypos 0 Accel 0 0.2
+	Animate respawntime ypos 7 Accel 0 0.2
+}
+event TeamStatus_PlayerAlive
+{
+	Animate DeathPanel ypos 0 Accel 0 0.2
+	Animate SkullPanel ypos 0 Accel 0 0.2
+	Animate respawntime ypos 7 Accel 0 0.2
+
+	SetVisible DeathPanel  0 0.2
+	SetVisible SkullPanel  0 0.2
+	SetVisible respawntime 0 0.2
+}
+//================Spy Disguise===================
+event HudSpyDisguiseChanged
+{
+	Animate PlayerStatusSpyOutlineImage		Alpha		"255"			Linear 0.0 0.2
+	
+	
+	Animate PlayerStatusSpyOutlineImage		Position	"c-200 c-50"	Linear 0.0 0.2		// 200 200
+	Animate PlayerStatusSpyOutlineImage		Size		"200 200"		Linear 0.0 0.2		// 400 400
+
+	RunEvent HudSpyDisguiseHide	0.7
+}
+event HudSpyDisguiseHide
+{
+	Animate PlayerStatusSpyOutlineImage		Position	"c-290 r90"		Linear 0.0 0.2
+	Animate PlayerStatusSpyOutlineImage		Size		"40 40"			Linear 0.0 0.2
+	
+	Animate PlayerStatusSpyOutlineImage		Alpha		"0"				Linear 0.2 0.1
+}
+event HudSpyDisguiseFadeIn
+{
+	RunEvent HudSpyDisguiseChanged	0
+	Animate PlayerStatusSpyImage			Alpha		"255"			Linear 0.9 0.1	
+	Animate PlayerStatusClassImage			Size		"40 40"			Linear 0.0 0.0
+}
+event HudSpyDisguiseFadeOut
+{
+	RunEvent HudSpyDisguiseChanged	0
+	Animate PlayerStatusSpyImage			Alpha		"0"				Linear 0.9 0.1	
+	Animate PlayerStatusClassImage			Size		"0 0"			Linear 0.0 0.0
+}
+
+//===========Local player flag pickup/drop==============
+event FlagOutlineHide
+{
+	Animate OutlineImage	Alpha		"0"				Linear 0.0 0.1
+}
+event FlagOutline
+{
+	RunEvent FlagOutlineHide 0.0
+	Animate OutlineImage	Alpha		"255"			Linear 0.1 0.2
+	
+	Animate OutlineImage	Position	"c-100 260"		Linear 0.1 0.2		// "c-200 140"
+	Animate OutlineImage	Size		"200 100"		Linear 0.1 0.2		// "400 200"
+
+	//Animate OutlineImage	Position	"c-50 r137"		Linear 0.7 0.2
+	//Animate OutlineImage	Size		"100 50"		Linear 0.7 0.2
+	
+	Animate OutlineImage	Position	"c-22 r60"		Linear 0.7 0.2
+	Animate OutlineImage	Size		"44 22"			Linear 0.7 0.2
+	
+	Animate OutlineImage	Alpha		"0"				Linear 0.9 0.1
+}
+
+//===========Show the Overtime panel==================
+event OvertimeShow
+{
+	Animate OvertimeLabel				Alpha		"255"			Linear 0.0 0.1
+	Animate OvertimeBG					Alpha		"255"			Linear 0.0 0.1
+}
+event OvertimeLabelPulseRed
+{
+	Animate	OvertimeLabel 	FgColor		TanLight	Linear 0.0 0.3
+	Animate	OvertimeLabel 	FgColor		RedSolid	Linear 0.3 0.3
+	RunEvent OvertimeLabelPulseRed 0.6
+}
+
+event HudSnapShotReminderIn
+{
+	//Animate ScreenshotPanel		Position	"-200 0"	Linear 0.0 0.001
+	//Animate ScreenshotPanel		Position	"-5 0"	Spline 0.001 0.2
+	
+	//Animate ScreenshotPanel		Position	"-200 0"	Spline 2.5 0.1
+	
+	Animate ScreenshotPanel		Alpha		"0"			Linear 0.0 0.1
+	Animate ScreenshotPanel		Alpha		"255"		Linear 0.0 0.1	
+	
+	Animate ScreenshotPanel		Alpha		"0"			Linear 2.5 0.1	
+}
+event HudReplayReminderIn	// Places the replay reminder in the same place as the snapshot reminder  // not anymore
+{
+	//Animate ReplayReminder		Position	"-200 37"	Linear 0.0 0.001
+	//Animate ReplayReminder		Position	"-5 37"	Spline 0.001 0.2
+	
+	//Animate ReplayReminder		Position	"-200 37"	Spline 2.5 0.1
+	
+	Animate ReplayReminder		Alpha		"0"			Linear 0.0 0.1
+	Animate ReplayReminder		Alpha		"255"		Linear 0.0 0.1	
+	
+	Animate ReplayReminder		Alpha		"0"			Linear 2.5 0.1
+}
+event HudReplayReminderIn2	// Puts the panel below the snapshot panel
+{
+	//Animate ReplayReminder		Position	"-200 37"	Linear 0.0 0.001
+	//Animate ReplayReminder		Position	"-5 37"	Spline 0.001 0.2
+	
+	//Animate ReplayReminder		Position	"-200 37"	Spline 2.5 0.1
+	
+	Animate ReplayReminder		Alpha		"0"			Linear 0.0 0.1
+	Animate ReplayReminder		Alpha		"255"		Linear 0.0 0.1	
+	
+	Animate ReplayReminder		Alpha		"0"			Linear 2.5 0.1
+}
+event HudReplayTipIn
+{
+	Animate ReplayTip			Position	"10 -100"	Linear 0.0 0.001
+	Animate ReplayTip			Position	"10 6"		Spline 0.001 0.1
+}
+event HudReplayTipOut
+{
+	Animate ReplayTip			Position	"10 6"		Linear 0.0 0.001
+	Animate ReplayTip			Position	"10 -100"	Spline 0.001 0.1
+}
+//==============Active Timer BG Pulse===================
+event ActiveTimerBGPulse
+{
+	Animate	ActiveTimerBG 	Alpha		"0"			Linear 0.1 0.1
+	Animate	ActiveTimerBG 	Alpha		"255"		Linear 0.3 0.1
+	
+	Animate	ActiveTimerBG 	Alpha		"0"			Linear 0.5 0.1
+	Animate	ActiveTimerBG 	Alpha		"255"		Linear 0.7 0.1
+	
+	Animate	ActiveTimerBG 	Alpha		"0"			Linear 0.9 0.1
+	Animate	ActiveTimerBG 	Alpha		"255"		Linear 1.1 0.1
+}
+event ActiveTimerHighlight
+{
+	Animate TimePanelValue FgColor	White		Linear 0.1 0.1
+	Animate TimePanelValue FgColor	Gray		Linear 0.3 0.1
+
+	Animate TimePanelValue FgColor	White		Linear 0.5 0.1
+	Animate TimePanelValue FgColor	Gray		Linear 0.7 0.1
+
+	Animate TimePanelValue FgColor	White		Linear 0.9 0.1
+	Animate TimePanelValue FgColor	Gray		Linear 1.1 0.1
+
+	Animate TimePanelValue FgColor	White		Linear 1.3 0.3
+	
+}
+event ActiveTimerDim
+{
+	// Slow fade out
+	Animate TimePanelValue FgColor	Gray		Linear 0.0 0.4
+}
