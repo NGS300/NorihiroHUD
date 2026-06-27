@@ -5530,7 +5530,6 @@
 			"width"		"128"
 			"height"	"32"
 		}
- 
  		"dragons_fury"
 		{
 			"dfile"	"HUD/d_images_v3"
@@ -5540,7 +5539,6 @@
 			"width"		"96"
 			"height"	"32"
 		}
- 
  		"dragons_fury_bonus"
 		{
 			"dfile"	"HUD/d_images_v3"
@@ -5550,7 +5548,6 @@
 			"width"		"128"
 			"height"	"32"
 		}
- 
 		"hot_hand"
 		{
 			"dfile"	"HUD/d_images_v3"
@@ -5560,13 +5557,21 @@
 			"width"		"64"
 			"height"	"32"
 		}
- 
 		"gas_blast"
 		{
 			"dfile"	"HUD/d_images_v3"
 			"dnegfile"	"HUD/dneg_images_v3"
 			"x"		"256"
 			"y"		"960"
+			"width"		"64"
+			"height"	"32"
+		}
+		"rocketpack_stomp"
+		{
+			"dfile"	"HUD/d_images_v2"
+			"dnegfile"	"HUD/dneg_images_v2"
+			"x"		"384"
+			"y"		"864"
 			"width"		"64"
 			"height"	"32"
 		}
@@ -5702,9 +5707,9 @@
 		{
 			"dfile"	"HUD/d_images_v2"
 			"dnegfile"	"HUD/dneg_images_v2"
-			"x"		"257"
-			"y"		"64"
-			"width"		"102"
+			"x"		"256"
+			"y"		"63"
+			"width"		"104"
 			"height"	"32"
 		}
 		"obj_sentrygun"
@@ -5984,9 +5989,9 @@
 			"dfile"	"vgui\logos\improvedkillicons\d2"
 			"dnegfile"	"vgui\logos\improvedkillicons\dneg2"
 			"x"		"0"
-			"y"		"185"
-			"width"		"72"
-			"height"	"24"
+			"y"		"183"
+			"width"		"74"
+			"height"	"27"
 		}
 		"memory_maker"
 		{
@@ -6112,6 +6117,15 @@
 			"x"		"256"
 			"y"		"960"
 			"width"		"64"
+			"height"	"32"
+		}
+		"rocketpack_stomp"
+		{
+			"dfile"	"vgui\logos\improvedkillicons\d"
+			"dnegfile"	"vgui\logos\improvedkillicons\dneg"
+			"x"		"128"
+			"y"		"160"
+			"width"		"42"
 			"height"	"32"
 		}
 		"shark"
@@ -6366,6 +6380,24 @@
 			"width"		"64"
 			"height"	"32"
 		}
+		"taunt_trickshot"
+		{
+			"dfile"	"vgui\logos\improvedkillicons\d3"
+			"dnegfile"	"vgui\logos\improvedkillicons\dneg3"
+			"x"		"384"
+			"y"		"704"
+			"width"		"128"
+			"height"	"32"
+		}
+		"nutcracker"
+		{
+			"dfile"	"vgui\logos\improvedkillicons\d3"
+			"dnegfile"	"vgui\logos\improvedkillicons\dneg3"
+			"x"		"256"
+			"y"		"896"
+			"width"		"128"
+			"height"	"32"
+		}
 //######################################################################################################
 //------------------------------------------------------------------------------------------------------
 //			Begin Customizable Icons (Do touch)
@@ -6379,6 +6411,26 @@
 //			"x"		"768"
 //			"y"		"288"
 //			"width"		"80"
+//			"height"	"32"
+//		}
+//AWPER HAND KILL ICON REPLACES STOCK SNIPER RIFLE KILL ICON
+//		"sniperrifle"
+//		{
+//			"dfile"	"vgui\logos\improvedkillicons\d"
+//			"dnegfile"	"vgui\logos\improvedkillicons\dneg"
+//			"x"		"896"
+//			"y"		"672"
+//			"width"		"127"
+//			"height"	"32"
+//		}
+//SENTRY BUSTER KILL ICON REPLACES CABER KILL ICON (FOR MVM)
+//		"ullapool_caber"
+//		{
+//			"dfile"	"vgui\logos\improvedkillicons\d"
+//			"dnegfile"	"vgui\logos\improvedkillicons\dneg"
+//			"x"		"0"
+//			"y"		"992"
+//			"width"		"76"
 //			"height"	"32"
 //		}
 //BLEED WEAPONS - RED IMPACTS
